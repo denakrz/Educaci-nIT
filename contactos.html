@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>	
+		a:link {text-decoration: none; color:#fff; background-color:#000} 
+		a:visited {text-decoration: color:#fff; background-color: #000} 
+		a:hover {text-decoration: none; color:#fff; background-color: #000} 
+		a:active {text-decoration: none; color:#fff; background-color: #000} 
+
+		h1 {text-align: left; font-size: 50px;}
+
+		body {font-family: Arial, Helvetica, sans-serif;
+			text-align:justify;
+
+</style>
+	<title>Contacto</title>
+</head>
+<body>
+	
+<p> <a style="color:#fff; background-color:#000" href="index.html">INICIO</a></p>
+<p><a style="color:#fff; background-color:#000" href="servicio.html">SERVICIO</a></p>
+<p><a style="color:#fff; background-color:#000" href="contactos.html">CONTACTO</a></p>
+
+	<h1 style="color:#9933ff">Contacto</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim arcu iaculis libero finibus dapibus. Phasellus porttitor quam ac mauris dapibus elementum. Aliquam condimentum blandit magna, sed pharetra sem suscipit sed. Ut et turpis est. Phasellus vitae lacus augue. Suspendisse quam massa, porttitor sit amet viverra non, varius eget velit. Integer ante nulla, varius sit amet fermentum eget, aliquet vitae magna. Donec maximus mauris mattis est mollis gravida. Aliquam a felis ex. Integer purus arcu, molestie molestie porta sit amet, tempor vitae purus. Nullam ornare aliquet nunc quis consequat. Aliquam dignissim convallis finibus. Donec pharetra in risus at consequat.</p>
+
+	<p>Gracias por visitar nuestra página web, para más información: <a style="text-decoration: none; color:#8FBC8F; background-color:#FFFAF0;" href="mailto:info@miweb.com" target="_top">info@miweb.com</a></p>
+
+	<form action="enviar.php" method="post" enctype="multipart-form/data">
+
+	<h2 style="color:#8000ff"> Ubicación </h2>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0755253049037!2d-58.37789018508664!3d-34.602251664927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses!2sar!4v1520281904386" height="450" frameborder="0" style="border:0; width:100%;" allowfullscreen ></iframe>
+
+<h2 style="color:#9933ff">Enviar consulta</h2>
+<fieldset>
+<legend>Datos Personales</legend>
+	<p>
+		<label>
+			Ingresa tu nombre
+			<!-- atributo MAXLENGHT permite poner sólo cierta cantidad de caracteres. -->
+			<!-- atributo PLACEHOLDER permite dar ejemplos de lo que deben tipear. -->
+			<!-- atributo VALUE permite traer info ya guardada, puedo editar lo que quiero pero debo borrarlo antes. -->
+				<input type="text" name="nombre" maxlength="15" required="required">
+		</label>
+	</p>
+
+	<p>	
+		<label>
+			Ingresa tu apellido
+				<input type="text" name="apellido"  required="required" > <!-- required="required" al final para que se completen si o si los campos -->
+		</label>
+	</p>
+
+	<p>
+		<label>
+			Edad
+				<input type="number" name="Edad" min="13" max="99" required="required" >
+		</label>
+	</p>
+
+	<p>
+		<label>
+		Contraseña
+			<input type="password" name="Contraseña" required="required" >
+		</label>
+	</p>
+	<p>
+		<label>
+		País
+		<select name="pais">
+			<option>Selecciona tu país</option>
+			<option value="ARG">Argentina</option>
+			<option value="CHI">Chile</option>
+			<option value="BR">Brasil</option>
+		</select>
+	</label>
+	</p>
+
+<p>Subí tu foto de perfil
+<label> <input type="file" name="perfil" accept=".jpg, .png, .gif style="widht:300px; height:20px; background:none; ">
+</label>
+</p>
+	
+</fieldset>
+<fieldset>
+<legend>Datos de Contacto</legend>
+<p>
+		<label>
+		Email
+			<input type="email" name="Correo electrónico" required="required" >
+		</label>
+	</p>
+	<p>
+	<label>
+		Consulta
+		<br>
+
+		<!-- Cuadro de texto -->
+		<textarea name="Consulta" id="" cols="40" rows="10" required="required" ></textarea>
+	</label>
+	</p>
+
+</fieldset>
+
+<fieldset>
+<legend>Cursada</legend>
+
+<!-- FORMULARIO RADIO: "multiple choise" debe tener un name para que no se puedan seleccionar todas las opciones. -->
+	<p> ¿Hiciste algún curso en EducaciónIT?
+	<br>
+		<label>
+		Sí <input type="radio" name="cursada">
+		</label>
+		<label>
+		No <input type="radio" name="cursada">
+		</label>
+	</p>
+<!-- CHECKBOX: name individual o único, puedo seleccionar varias opciones-->
+<p> ¿Qué cursos realizaste?
+<br>
+	<label>
+		Introduccion HTML5 y CSS <input type="checkbox" name="introhtml5" value="IntroHTML5" style="width:15px; height:15px;">
+	</label>
+	<br>
+	<label>
+		Introduccion a JavaScript <input type="checkbox" name="IntroJS" value="IntroJS" style="width:15px; height:15px;">
+	</label>
+	<br>
+	<label>
+		Maquetado avanzado HTML5 y CSS3 <input type="checkbox" name="Maquetado" value="Maquetado" style="width:15px; height:15px;">
+	</label>
+	<br>
+	<label>
+		Introducción al paradigma de los objetos <input type="checkbox" name="Objetos" value="Objetos" style="width:15px; height:15px;">
+	</label>
+	<br>
+</p>
+</fieldset>
+	<br>
+<!-- BOTON ENVIAR. -->
+	<input type="submit" value="Enviar">
+<!-- BOTON RESTABLECER. -->
+	<input type="reset" value="Restablecer">
+
+<!-- Para poder separar los formularios usamos "<br>" para romper la línea, o, "<p>" que queda más prolijo. Siempre se le debe poner un "name" para que los datos se envien a un servidor -->
+	</form>
+	
+</body>
+</html>
