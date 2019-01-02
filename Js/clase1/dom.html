@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clase 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .section {
+            border: 6px dashed gray;
+            padding: 10px;
+        }
+        .remarcado{
+            color: green;
+            background-color: cadetblue;
+            border-radius: 6px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="caja1">
+        <p>Primera</p>
+        <p>Segunda</p>
+        <p>Tercera</p>
+        <section>
+                <p>Sub1</p>
+                <p>Sub2</p>
+        </section>
+    </div>
+
+    <div id="caja2">
+            <p>Primera</p>
+            <p>Segunda</p>
+            <p>Tercera</p>
+        </div>
+    <script>
+        // Modelo de objetos del documento: DOM
+        // variable global
+
+        var nodoCaja = document.querySelector("#caja1"); // captura 1 único elemento
+        //console.log(nodo_caja);
+
+        // manipular el elemento
+        nodoCaja.style.border = "3px solid red";
+        nodoCaja.style.padding = "10px";
+        nodoCaja.style.backgroundColor = "orange"; // si usamos propiedades de CSS que tienen más de una palabra, agrego camelCase
+        
+        // para seleccionar los P sólo de la primer caja, hay dos formas:
+        
+        var arrNodosP = nodoCaja.querySelectorAll(":scope>p"); // esta es mejor cuando ya tengo filtrado nodoCaja, :scope = hijos directos
+
+        var arrNodosP = document.querySelectorAll("#caja1>p"); // devuelve un array de nodos
+
+
+        // nodoP.style.color = "red";
+        //for(var i=0; i < arrNodosP.length; i++){
+        //    arrNodosP[i].classList.add("remarcado");
+        //} 
+
+        arrNodosP.forEach(function(p){ 
+            p.classList.add("remarcado"); // foreach hace una vuelta de cada elemento del array
+        })
+
+        arrNodosP[0].innerHTML ="<b>Modificado</b><h2>Agregado por JS</h2>"; // puedo cambiar contenido y etiquetas.
+        
+        var nodoH2 = document.querySelector("h2");
+        nodoH2.style.color = "black";
+        nodoH2.onclick=function(){
+            alert("hola, soy un h2");
+        }
+
+        // MDN developer.mozilla.org -> documentación oficial de JS. 
+    </script>
+</body>
+</html>

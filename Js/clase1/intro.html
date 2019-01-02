@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clase 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+
+        var apellido; // declaro
+        apellido = "Krzyny"; // asigno valor
+        var nombres = ["A", "B", "C", "20", true]; // dentro de una varible tenemos 4 valores -> array
+        
+        // nombre de una variable:
+        // az AZ 09 _ $
+        // 1. No puede user un numero como primer caracter
+        // 2. No puedo usar palabras reservadas. EJ: switch, if, var, etc.
+        // 3. Utilizar camelCase.
+
+        var personaX = {
+            nombre: "Denise",
+            apellido: "Krzyny",
+            edad: 21,
+            materias: ["Angular", "React", "Vue"]
+        }; // objeto
+
+        console.log(personaX.nombre); // estilo propiedad
+        console.log(personaX["apellido"]); // estilo array asosiativo
+        console.log(personaX.materias[1]); // imprime React
+
+        // posibles valores que puede tener una variable:
+        // Primitivos //
+
+        // 1. Numeros: Infinity, NaN
+        // 10 + Nan = Siempre da Nan
+        // 10 / "A" = NaN
+        // 10+96+"A"= 106A -> Concatena
+
+        // 2. Cadenas: "Hola", 'Hola', 'Hola mi nombre es ${nombre}!'
+        // ´Hola mi nombre es ${}´ -> Cadena template: ´´ nos permite realizar una operación o establecer una variable.
+
+        // 3. Booleanos: true o false 
+
+        // 4. Undefined: normalmente es js quien asigna este tipo de dato a variables
+
+        // 5. Null: puesto por el programador.
+
+
+        // Complejos //
+
+        // 6. Array: variable con varios valores (incluso de diferente tipo)
+
+        // 7. Objetos: conjunto de variables
+
+        // 8. Expresiones regulares
+
+        // 9. Tipos de objetos del lenguaje (fechas, nodos)
+
+        // 10. Funciones: agrupación de sentencias
+        // declaración de una función
+        function sumar(a, b){
+            alert(a + b);
+        }
+        //llamado de la función 
+        sumar (10,20);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
